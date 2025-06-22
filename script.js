@@ -8,3 +8,11 @@ document.querySelectorAll('.sidebar nav a').forEach(link => {
     }
   });
 });
+
+// Highlight active sidebar link on click
+document.querySelectorAll('.sidebar nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.sidebar nav a').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
